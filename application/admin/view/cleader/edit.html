@@ -1,0 +1,22 @@
+{extend name="common/edit" /}
+{block name="content"}
+<div class="layui-form-item">
+    <label class="layui-form-label">团长名称</label>
+    <div class="layui-input-block">
+        <input autocomplete="off" type="text" name="name" lay-verify="required" placeholder="请输入门店名称" class="layui-input" value="{$info.name??''}">
+    </div>
+</div>
+<div class="layui-form-item">
+    <label class="layui-form-label">联系电话</label>
+    <div class="layui-input-block">
+        <input autocomplete="off" type="text" name="tel" placeholder="请输入联系电话" class="layui-input" value="{$info.tel??''}">
+    </div>
+</div>
+<div class="layui-form-item">
+    <label class="layui-form-label">小区</label>
+    <div class="layui-input-block">
+        <input autocomplete="off" type="text" name="community" placeholder="请输入小区" class="layui-input" value="{$info.community??''}">
+    </div>
+</div>
+{include file='common/locationchoose'/}
+{/block}
